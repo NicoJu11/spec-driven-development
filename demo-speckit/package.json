@@ -1,0 +1,29 @@
+{
+  "name": "photo-album-organizer",
+  "version": "1.0.0",
+  "description": "Local-first desktop photo album organizer built with Electron + Vite",
+  "main": "electron/main.cjs",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "prestart": "npx electron-rebuild -f -w better-sqlite3",
+    "start": "electron .",
+    "predev": "npx electron-rebuild -f -w better-sqlite3",
+    "dev": "vite build && electron .",
+    "pretest": "npm rebuild better-sqlite3",
+    "test": "vitest run",
+    "posttest": "npx electron-rebuild -f -w better-sqlite3",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "postinstall": "npx electron-rebuild -f -w better-sqlite3"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.6.0"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-rebuild": "^3.2.9",
+    "vite": "^5.2.0",
+    "vitest": "^1.6.0"
+  }
+}

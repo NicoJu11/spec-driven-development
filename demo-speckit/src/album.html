@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Album</title>
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/album-view.css" />
+</head>
+<body>
+  <header class="app-header">
+    <button id="btn-back" class="btn-secondary">← Back</button>
+    <h1 id="album-title">Album</h1>
+    <button id="btn-import" class="btn-primary">+ Import Photos</button>
+  </header>
+
+  <main>
+    <div id="empty-album-state" class="empty-state hidden">
+      <p>No photos yet — click Import to add photos.</p>
+    </div>
+    <div id="photo-grid" class="photo-grid"></div>
+  </main>
+
+  <div id="error-banner" class="error-banner hidden"></div>
+
+  <script type="module" src="./js/album-view.js"></script>
+</body>
+</html>
